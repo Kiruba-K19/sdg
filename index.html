@@ -173,16 +173,16 @@
                     gesture-handler  visible="true"></a-video>
              <audio id="audio1" src="audio1.mp3"></audio>
         </a-marker>
-<!-- goal17 -->
+<!-- goal17
         <a-marker type="pattern" url="marker-17.patt" emitevents="true" smooth="true"
                 smoothCount="10"
                 smoothTolerance="0.01"
                 smoothThreshold="5"  id="g17_marker">
             <!-- Video element -->
-            <a-video id="video17" src="#v17" width="5" height="5" position="0 -2.5 -2.5" rotation="-90 0 0" scale="0.6 0.5 0.4" class="clickable"
+            <!--<a-video id="video17" src="#v17" width="5" height="5" position="0 -2.5 -2.5" rotation="-90 0 0" scale="0.6 0.5 0.4" class="clickable"
                     gesture-handler  visible="true"></a-video>
              <audio id="audio1" src="audio1.mp3"></audio>
-        </a-marker>
+        </a-marker>-->
                         <a-assets>
           <video id="v2" loop crossorigin="anonymous"   muted playsinline>
                 <source src="g2.mp4" type="video/mp4">
@@ -214,8 +214,8 @@
                 <source src="g15.mp4" type="video/mp4">
           <video id="v16" autoplay loop crossorigin="anonymous"  muted playsinline>
                 <source src="g16.mp4" type="video/mp4">
-          <video id="v17" autoplay loop crossorigin="anonymous" muted playsinline>
-                <source src="g17.mp4" type="video/mp4">
+          <!--<video id="v17" autoplay loop crossorigin="anonymous" muted playsinline>
+                <source src="g17.mp4" type="video/mp4">-->
     <audio id="audio1" src="audio1.mp3"></audio>              
           </a-assets>
         <a-entity camera></a-entity>
@@ -237,7 +237,6 @@
             var g14_marker = document.querySelector('#g14_marker');
            var g15_marker = document.querySelector('#g15_marker');
            var g16_marker = document.querySelector('#g16_marker');
-           var g17_marker = document.querySelector('#g17_marker');
          g2_marker.addEventListener('markerLost', function () {
                 var video2 = document.querySelector('#video2');
                 var audio1 = document.querySelector('#audio1'); 
@@ -426,22 +425,7 @@
                 video16.components.material.material.map.image.currentTime = 0;
                 audio1.pause();
             });
- g17_marker.addEventListener('markerFound', function () {
-                var video17 = document.querySelector('#video17');
-                var audio1= document.querySelector('#audio1'); 
-                video17.components.material.material.map.image.play();
-               audio1.play();
-            });
-
-            g17_marker.addEventListener('markerLost', function () {
-                var video17 = document.querySelector('#video17');
-                var audio1 = document.querySelector('#audio1'); 
-                video17.components.material.material.map.image.currentTime = 0;
-                audio1.pause();
-            });
-
-
-        </script>
+ </script>
     </a-scene>
 </body>
 </html>
