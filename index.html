@@ -14,7 +14,13 @@
                 smoothTolerance="0.01"
                 smoothThreshold="5"  id="g1_marker">
             <!-- Video element -->
-            <text x="50%" y="50%" text-anchor="middle">HELLO</text>
+             <a-image
+                    src="asset.png"
+                    scale="1 1 1"
+                    class="clickable"
+                    rotation="-90 0 0"
+                    gesture-handler
+                ></a-image>
         </a-marker>
 <!-- goal2 -->
         <a-marker type="pattern" url="marker-2.patt" emitevents="true" smooth="true"
@@ -178,8 +184,6 @@
              <audio id="audio1" src="audio1.mp3"></audio>
         </a-marker>
                         <a-assets>
-            <video id="v1" autoplay loop crossorigin="anonymous"  preload="auto" muted playsinline>
-                <source src="g1.mp4" type="video/mp4">
           <video id="v2" autoplay loop crossorigin="anonymous"   muted playsinline>
                 <source src="g2.mp4" type="video/mp4">
           <video id="v3" autoplay loop crossorigin="anonymous"  muted playsinline>
@@ -234,28 +238,7 @@
            var g15_marker = document.querySelector('#g15_marker');
            var g16_marker = document.querySelector('#g16_marker');
            var g17_marker = document.querySelector('#g17_marker');
-
-          g1_marker.addEventListener('markerFound', function () {
-                var video1 = document.querySelector('#video1');
-              var audio1 = document.querySelector('#audio1'); 
-                video1.components.material.material.map.image.play();
-              audio1.play();
-            });
-
-            g1_marker.addEventListener('markerLost', function () {
-                var video1 = document.querySelector('#video1');
-                var audio1 = document.querySelector('#audio1'); 
-                video1.components.material.material.map.image.currentTime = 0;
-                audio1.pause();
-            });
- g2_marker.addEventListener('markerFound', function () {
-                var video2 = document.querySelector('#video2');
-                var audio1 = document.querySelector('#audio1'); 
-                video2.components.material.material.map.image.play();
-               audio1.play();
-            });
-
-            g2_marker.addEventListener('markerLost', function () {
+         g2_marker.addEventListener('markerLost', function () {
                 var video2 = document.querySelector('#video2');
                 var audio1 = document.querySelector('#audio1'); 
                 video2.components.material.material.map.image.currentTime = 0;
